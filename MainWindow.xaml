@@ -8,33 +8,48 @@
         Title="Visor Imagenes" Height="600" Width="700" MinHeight="600" MinWidth="700" Icon="assets/Yingfengling-Fl-I-Love-Sports-Baseball.ico">
     <DockPanel LastChildFill="False">
         <DockPanel DockPanel.Dock="Bottom" Background="LightBlue" Height="60" Margin="10" LastChildFill="False">
-            <TextBlock FontFamily="Rubik" FontSize="20" VerticalAlignment="Center" DockPanel.Dock="Left">Nº de imagenes: 10</TextBlock>
-            <TextBlock FontFamily="Rubik" FontSize="20" VerticalAlignment="Center" DockPanel.Dock="Right">Diseñado por Luis Terceras</TextBlock>
+            <TextBlock FontSize="20" VerticalAlignment="Center" DockPanel.Dock="Left">Nº de imagenes: 10</TextBlock>
+            <TextBlock FontSize="20" VerticalAlignment="Center" DockPanel.Dock="Right">Diseñado por Luis Terceras</TextBlock>
         </DockPanel>
 
         <Border DockPanel.Dock="Right" Margin="10" BorderBrush="Black" BorderThickness="3" CornerRadius="3">
             <DockPanel Background="LightGreen" Width="120" LastChildFill="False">
-                <Button Margin="3" DockPanel.Dock="Top">Añadir Imagen</Button>
-                <Button Margin="3" DockPanel.Dock="Top">Eliminar imagen</Button>
-                <Button Margin="3" DockPanel.Dock="Top">Eliminar todas</Button>
-                <Button Margin="3" DockPanel.Dock="Bottom">Rotar</Button>
-                <Button Margin="3" DockPanel.Dock="Bottom">Recortar</Button>
+                <Button DockPanel.Dock="Top">Añadir Imagen</Button>
+                <Button DockPanel.Dock="Top">Eliminar imagen</Button>
+                <Button DockPanel.Dock="Top">Eliminar todas</Button>
+                <Button DockPanel.Dock="Bottom">Rotar</Button>
+                <Button DockPanel.Dock="Bottom">Recortar</Button>
             </DockPanel>
         </Border>
 
         <DockPanel DockPanel.Dock="Top" HorizontalAlignment="Center">
-            <TextBlock FontFamily="Rubik" FontSize="40">Visor de imágenes</TextBlock>
+            <TextBlock FontSize="40">Visor de imágenes</TextBlock>
         </DockPanel>
 
         <WrapPanel>
-            <Image Source="assets/episodioIV.jpg" Height="200"></Image>
-            <Image Source="assets/episodioIV.jpg" Height="200"></Image>
-            <Image Source="assets/episodioIV.jpg" Height="200"></Image>
-            <Image Source="assets/episodioIV.jpg" Height="200"></Image>
-            <Image Source="assets/episodioIV.jpg" Height="200"></Image>
-            <Image Source="assets/episodioIV.jpg" Height="200"></Image>
-            <Image Source="assets/episodioIV.jpg" Height="200"></Image>
-            <Image Source="assets/episodioIV.jpg" Height="200"></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
         </WrapPanel>
     </DockPanel>
+
+    <!--<Setter Property="" Value="" />-->
+    
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontFamily" Value="Rubik"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Height" Value="200"/>
+            <Setter Property="Source" Value="assets/episodioIV.jpg" />
+        </Style>
+    </Window.Resources>
 </Window>
